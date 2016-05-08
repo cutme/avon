@@ -1,0 +1,84 @@
+/*
+	Flacon
+*/
+
+.c-flacon {
+	position: relative;
+	top: -141px;
+	left: -55px;
+	
+	p {
+		display: inline-block;
+		white-space: nowrap;
+		background-color: white;
+		padding: 0 20px;
+		line-height: 1;
+		letter-spacing: -1px;
+		font: {
+			family: $helvetica;
+			weight: $bold;
+			size: em(60);
+		}
+		color: #a0a7af;
+		
+		&:first-of-type {
+			padding: {
+				top: 20px;
+				right: 50px;
+			}
+		}
+	}
+
+	&__info {
+		position: absolute;
+		left: 295px; top: 220px;
+		z-index: 10;
+	}
+
+	@media screen and ( max-width: 960px ) {
+		left: auto;
+		padding-left: 20px;
+
+		&__info {
+			p {
+				font-size: 6.3vw;
+			}
+		}		
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		top: auto;
+		left: auto;
+		padding-right: 200px;
+
+		&__info {
+			@include scut-center-transform(y);
+			left: auto;
+			right: 0;
+
+			p {				
+				&:first-of-type {
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		padding-left: 0;
+
+		p {
+			display: block;
+		}
+		
+		&__info > br {
+			display: none;
+		}
+
+		.o-media {
+			width: 220px;
+			max-width: none;
+		}
+	}
+}
+

@@ -1,0 +1,27 @@
+.o-btn {
+	@include hover;
+	display: inline-block;
+	height: 55px;
+	background-color: black;
+	padding: 0 20px;
+	font-size: em(30);
+	white-space: nowrap;
+	
+	&--big {
+		height: 70px;
+		padding: 0 35px;
+		font-size: em(28);
+		line-height: 70px;
+	}
+	
+	&:hover {
+		.no-mobile & {
+			background-color: white;
+			color: black;
+		}
+	}
+	
+	&:active {
+		background-color: darken($violet--brighter, 10%);
+	}
+}

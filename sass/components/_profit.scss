@@ -1,0 +1,132 @@
+/*
+	Profit
+*/
+
+.c-profit {
+	background-color: $gray;
+	border-bottom: 5px solid white;
+	padding: 30px 0;
+	text-align: center;
+	
+	&__item {
+		display: inline-block;
+		width: 260px;
+		border-right: 1px solid white;
+		padding-left: 30px;
+		vertical-align: middle;
+		text-align: left;
+		vertical-align: top;
+		color: $gray--darker;
+		
+		i {
+			@include border-radius(50%);
+			position: relative;
+			display: inline-block;
+			width: 82px; height: 82px;
+			background-color: white;
+			margin-right: 5px;
+			text-align: center;
+			line-height: 74px;
+			vertical-align: middle;
+			color: $pink;
+			
+			&.icon-bag {
+				font-size: em(42);				
+			}
+			
+			&.icon-back {
+				font-size: em(36);
+			}
+			
+			&.icon-pig {
+				font-size: em(50);
+			}
+		}
+		
+		p {
+			text-transform: uppercase;
+			font-size: em(24);
+			line-height: 1;
+		}
+		
+		&:nth-child(2) {
+			.c-profit__lead {
+				&:after {
+					@include background-size(cover);
+					position: absolute;
+					right: -45px; bottom: -5px;
+					display: block;
+					width: 62px;
+					height: 31px;
+					background-image: url(../img/inpost.png);
+					content: ' ';
+				}
+			}
+		}
+		
+		&:last-child {
+			border: none;
+		}
+	}
+	
+	&__lead {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	h2 {
+		margin: 0 auto 20px auto;
+		font: {
+			family: $coalhandluke;
+			size: em(43);
+		}
+		color: #dc359b;
+	}
+	
+	@media screen and ( min-width: 961px ) {
+		&__item {
+			&:nth-child(2) {
+				width: 360px;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 960px ) {
+
+		i {
+			display: block;
+			margin: 0 auto 20px auto;
+		}
+		
+		&__item {
+			padding: 0;
+			width: grid(300);
+			text-align: center;
+			
+			&:nth-child(2) {
+				.c-profit__lead {
+					&:after {
+						position: relative;
+						right: auto;
+						bottom: auto;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+		
+		&__lead {
+			p {
+				font-size: 3.6vw;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 479px ) {
+		&__item {
+			border: none;
+		}
+	}
+}
+

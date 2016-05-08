@@ -1,0 +1,44 @@
+.c-popup {
+	@include background-size(cover);
+	position: relative;
+	max-width: 690px;
+	background-image: url(../img/blur-2.jpg);
+	padding: 80px grid(40, 690);
+    margin: 40px auto;
+
+	&--myths {
+		text-align: center;
+		color: white;
+
+		
+		h2 {
+			font: {
+				family: $coalhandluke;
+				size: em(75);
+			}
+		}
+		
+		h3 {
+			margin-bottom: 40px;
+			font-size: em(36);
+		}
+		
+		@media screen and ( max-width: 640px ) {
+			h2 {
+				font-size: 10vw;
+			}
+			
+			h3 {
+				font-size: 4.5vw;
+			}
+		}
+		
+		@media screen and ( max-width: 480px ) {
+			padding: {
+				top: 40px;
+				bottom: 40px;
+			}
+		}
+		
+	}
+}

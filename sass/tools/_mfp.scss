@@ -1,0 +1,64 @@
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+
+
+.mfp-close-btn-in .mfp-close {
+	@include opacity(1);
+	right: -31px;
+	top: -31px !important;
+	width: 62px;
+	height: 62px;
+	background-color: black;
+	border-radius: 50%;
+	font-size: 50px;
+	font-weight: bold;
+	color: white !important;
+}
+
+@media screen and ( max-width: 640px ) {
+	.mfp-close-btn-in .mfp-close {
+		right: -21px;
+		top: -21px !important;
+		width: 42px;
+		height: 42px;
+		font-size: 34px;
+	}
+	
+	.mfp-container {
+		padding: {
+			left: 21px !important;
+			right: 21px !important;
+		}
+	}
+}

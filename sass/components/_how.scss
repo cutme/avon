@@ -1,0 +1,105 @@
+/*
+	How it's working
+*/
+
+.c-how {
+	position: relative;
+	z-index: 15;
+	background-color: $navy;
+	padding: 30px;
+	padding-bottom: 0;
+	border-bottom: 5px solid white;
+
+	article {
+		max-width: 515px;
+
+		h2 {
+			position: relative;
+			margin-bottom: 25px;
+			font: {
+				family: $coalhandluke;
+				size: em(54);
+			}
+			
+			&:after {
+				position: absolute;
+				left: -15px; bottom: -5px;
+				display: block;
+				max-width: 525px;
+				height: 10px;
+				background-image: url(../img/underline--dash.png);
+				content: ' ';
+			}
+		}
+		
+		ul {
+			margin-bottom: 30px;
+			padding-left: 40px;
+
+			li {
+				position: relative;
+				margin-bottom: 20px;
+				line-height: 1.2;
+				
+				&:before {
+					@include background-size(cover);
+					position: absolute;
+					left: -50px;
+					top: 0;
+					display: block;
+					width: 50px;
+					height: 46px;
+					
+					content: ' ';
+				}
+				
+				&:nth-child(1) {
+					&:before {
+						background-image: url(../img/01.png);
+					}
+				}
+				
+				&:nth-child(2) {
+					&:before {
+						top: -10px;
+						background-image: url(../img/02.png);
+					}
+				}
+				
+				&:nth-child(3) {
+					margin: 0;
+
+					&:before {
+						background-image: url(../img/03.png);
+					}
+				}
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 960px ) {
+		article {
+			margin: 0 auto;
+			
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		article {
+			h2 {
+				font-size: em(40);
+			}
+		}
+	}
+	
+}

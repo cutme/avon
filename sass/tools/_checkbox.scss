@@ -1,0 +1,45 @@
+span.ui-checkbox {
+	@include hover;
+	position: relative;
+	display: inline-block;
+	width: 30px; height: 30px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+span.ui-checkbox {
+	top: 2px;
+	background-color: white;
+	border: 3px solid #cdcdcd;
+	text-align: center;
+	line-height: 24px;
+	overflow: hidden;
+
+	&:after {
+		@include background-size(cover);
+		position: absolute;
+		left: 3px; top: 3px;
+		display: none;
+		width: 18px; height: 18px;
+		background-image: url(../img/tick.png);
+		content: ' ';
+	}
+}
+
+span.ui-helper-hidden {
+	display: none;
+}
+
+span.ui-checkbox-state-checked,
+span.ui-checkbox-state-checked-hover {
+	
+	
+	&:after {
+		display: block;
+	}
+}
+
+.ui-helper-hidden-accessible {
+	position: absolute;
+	left: -999em;
+}

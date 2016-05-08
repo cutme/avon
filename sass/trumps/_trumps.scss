@@ -1,0 +1,27 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.u-align-center {
+	text-align: center;
+}
+
+.u-posy {
+	@include scut-center-transform(y);
+}
+
+.u-pull-left {
+	float: left;
+}
+
+.u-pull-right {
+	float: right;
+}
+
+.safari {
+	* {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+	}
+}
+

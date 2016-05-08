@@ -1,0 +1,34 @@
+button, input, textarea {
+	background-color: transparent;
+	border: none;
+	border-color: inherit;
+	border-radius: 0;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input {
+	-webkit-appearance: none;
+	text-rendering: optimizeLegibility; 
+	width: 100%;
+	font: {
+		family: $text;
+	}
+	cursor: text;
+	color: inherit;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}

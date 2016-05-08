@@ -1,0 +1,163 @@
+/*
+	Stay consultant form
+*/
+
+.c-stay {
+	background-color: $violet;
+	padding: 30px 0 40px grid(30);
+	font-weight: $regular;
+	
+	a {
+		text-decoration: underline;
+		color: #ffe4c9;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	
+	h3 {
+		position: relative;
+		margin-bottom: 40px;
+		
+		&:after {
+			@include background-size(contain);
+			position: absolute;
+			bottom: -15px;
+			display: block;
+			width: 306px;
+			height: 28px;
+			background: {
+				image: url(../img/underline--brush.png);
+				repeat: no-repeat;
+			}
+			content: ' ';
+		}
+	}
+	
+	fieldset {
+		padding: 0 grid(50, 425) 0 grid(40, 425);
+	}
+	
+	h6 {
+		padding-top: 5px;
+		font-family: $arial;
+		font-weight: $regular;
+		color: $violet--brightest;
+	}
+	
+	&__req {
+		position: absolute;
+		left: -20px; top: 0;
+		line-height: 1;
+
+		&:before {
+			font-size: em(36);
+			color: $violet--brightest;
+			content: '*';
+		}
+	}
+
+	&__row {
+		@include clear;
+		position: relative;
+		display: block;
+		margin-bottom: 20px;
+		
+		&--rules {
+			display: table;
+			width: 100%;
+			
+			> div {
+				display: table-cell;
+				vertical-align: top;
+			}
+		}
+	}
+	
+	&__info {
+		display: block;
+		font: {
+			family: $arial;
+			size: 11px;
+		}
+		line-height: 1.4;
+		font-weight: $regular;
+	}
+	
+	&__text {
+		@include hover;
+		height: 60px;
+		background-color: rgba(white, .12);
+		padding: 0 20px;
+		font: {
+			family: $arial;
+			size: em(24);
+			weight: $regular;
+		}
+		
+		&:hover {
+			background-color: rgba(white, .2);
+		}
+	}
+
+	@include input-placeholder {
+		color: $violet--brighter;
+	}
+	
+	@media screen and ( min-width: 961px ) {
+		position: absolute;
+		right: -30px; bottom: -30px;
+		width: grid(425);
+		
+		h3 {
+			display: inline-block;
+			
+			&:after {
+				right: 0;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 960px ) {
+		
+		h3 {
+			text-align: center;
+
+			&:after {
+				@include scut-center-transform(x);
+				bottom: -20px;
+				width: 200px;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+	
+		&__text {
+			height: 50px;
+			font-size: em(20);
+		}
+		
+		fieldset {
+			padding: 0 30px;
+		}
+	
+		h3 {
+			font-size: 8vw;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		.o-media {
+			float: none;
+			margin: 0 auto 30px auto;
+		}
+		
+		.o-btn {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+

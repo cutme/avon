@@ -1,0 +1,12 @@
+.c-topbar {
+	background-color: $violet;
+	border-bottom: 1px solid #bcc0c5;
+	
+	.o-wrap {
+		height: 100%;
+	}
+	
+	@media screen and ( min-width: 641px ) {
+		min-height: 196px;
+	}
+}
