@@ -1,6 +1,10 @@
 /*jshint expr:true */
 
 jQuery(function($) {
+	function exist(o) {
+		d = ($(o).length>0) ? true : false;
+		return d;
+	}
 	var L = {
 		modal: function() {
 			$.magnificPopup.open({
@@ -12,7 +16,8 @@ jQuery(function($) {
             });
 		},
 		init: function() {
-			L.modal();
+			exist('.c-popup') && L.modal();
+			
 		}
 	};
 	$(document).ready(function() {
