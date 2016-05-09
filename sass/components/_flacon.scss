@@ -17,14 +17,14 @@
 		font: {
 			family: $helvetica;
 			weight: $bold;
-			size: em(60);
+			size: em(58);
 		}
 		color: #a0a7af;
 		
 		&:first-of-type {
 			padding: {
 				top: 20px;
-				right: 50px;
+				right: 60px;
 			}
 		}
 	}
@@ -82,3 +82,14 @@
 	}
 }
 
+body, html {
+	width: 100%; height: 100%;
+}
+
+.header {
+	background: red;
+	
+	&:hover {
+		background: gray;
+	}
+}

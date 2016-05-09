@@ -314,6 +314,137 @@ strong {
     content: ''; }
 
 /*
+	Become a consultant
+*/
+.c-become-consultant {
+  background-color: #8463bb;
+  padding: 30px 0 40px 3.125%;
+  font-weight: 400; }
+  .c-become-consultant a {
+    text-decoration: underline;
+    color: #ffe4c9; }
+    .c-become-consultant a:hover {
+      text-decoration: none; }
+  .c-become-consultant h3 {
+    position: relative;
+    margin-bottom: 40px; }
+    .c-become-consultant h3:after {
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      position: absolute;
+      bottom: -15px;
+      display: block;
+      width: 306px;
+      height: 28px;
+      background-image: url(../img/underline--brush.png);
+      background-repeat: no-repeat;
+      content: ' '; }
+  .c-become-consultant fieldset {
+    padding: 0 11.76471% 0 9.41176%; }
+  .c-become-consultant h6 {
+    padding-top: 5px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #f49bff; }
+  .c-become-consultant__req {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    line-height: 1; }
+    .c-become-consultant__req:before {
+      font-size: 2em;
+      color: #f49bff;
+      content: '*'; }
+  .c-become-consultant__row {
+    clear: both;
+    position: relative;
+    display: block;
+    margin-bottom: 20px; }
+    .c-become-consultant__row:after {
+      clear: both;
+      display: block;
+      content: ''; }
+    .c-become-consultant__row--rules {
+      display: table;
+      width: 100%; }
+      .c-become-consultant__row--rules > div {
+        display: table-cell;
+        vertical-align: top; }
+  .c-become-consultant__info {
+    display: block;
+    font-family: "Arial", sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 400; }
+  .c-become-consultant__text {
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 0 20px;
+    font-family: "Arial", sans-serif;
+    font-size: 1.33333em;
+    font-weight: 400; }
+    .c-become-consultant__text:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
+  .c-become-consultant ::-webkit-input-placeholder {
+    color: #e3d2ff; }
+  .c-become-consultant :-moz-placeholder {
+    color: #e3d2ff; }
+  .c-become-consultant :-ms-input-placeholder {
+    color: #e3d2ff; }
+  @media screen and (min-width: 961px) {
+    .c-become-consultant {
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      width: 44.27083%; }
+      .c-become-consultant h3 {
+        display: inline-block; }
+        .c-become-consultant h3:after {
+          right: 0; } }
+  @media screen and (max-width: 960px) {
+    .c-become-consultant h3 {
+      text-align: center; }
+      .c-become-consultant h3:after {
+        position: absolute;
+        left: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: -20px;
+        width: 200px; } }
+  @media screen and (max-width: 640px) {
+    .c-become-consultant__text {
+      height: 50px;
+      font-size: 1.11111em; }
+    .c-become-consultant fieldset {
+      padding: 0 30px; }
+    .c-become-consultant h3 {
+      font-size: 8vw; } }
+  @media screen and (max-width: 480px) {
+    .c-become-consultant .o-media {
+      float: none;
+      margin: 0 auto 30px auto; }
+    .c-become-consultant .o-btn {
+      float: none;
+      width: 100%; } }
+
+/*
 	Flacon
 */
 .c-flacon {
@@ -329,11 +460,11 @@ strong {
     letter-spacing: -1px;
     font-family: "Helvetica", sans-serif;
     font-weight: 700;
-    font-size: 3.33333em;
+    font-size: 3.22222em;
     color: #a0a7af; }
     .c-flacon p:first-of-type {
       padding-top: 20px;
-      padding-right: 50px; }
+      padding-right: 60px; }
   .c-flacon__info {
     position: absolute;
     left: 295px;
@@ -372,6 +503,15 @@ strong {
       .c-flacon .o-media {
         width: 220px;
         max-width: none; } }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+.header {
+  background: red; }
+  .header:hover {
+    background: gray; }
 
 /*
 	Footer
@@ -640,137 +780,6 @@ strong {
   @media screen and (max-width: 479px) {
     .c-profit__item {
       border: none; } }
-
-/*
-	Stay consultant form
-*/
-.c-stay {
-  background-color: #8463bb;
-  padding: 30px 0 40px 3.125%;
-  font-weight: 400; }
-  .c-stay a {
-    text-decoration: underline;
-    color: #ffe4c9; }
-    .c-stay a:hover {
-      text-decoration: none; }
-  .c-stay h3 {
-    position: relative;
-    margin-bottom: 40px; }
-    .c-stay h3:after {
-      -webkit-background-size: contain;
-      -moz-background-size: contain;
-      -o-background-size: contain;
-      background-size: contain;
-      position: absolute;
-      bottom: -15px;
-      display: block;
-      width: 306px;
-      height: 28px;
-      background-image: url(../img/underline--brush.png);
-      background-repeat: no-repeat;
-      content: ' '; }
-  .c-stay fieldset {
-    padding: 0 11.76471% 0 9.41176%; }
-  .c-stay h6 {
-    padding-top: 5px;
-    font-family: "Arial", sans-serif;
-    font-weight: 400;
-    color: #f49bff; }
-  .c-stay__req {
-    position: absolute;
-    left: -20px;
-    top: 0;
-    line-height: 1; }
-    .c-stay__req:before {
-      font-size: 2em;
-      color: #f49bff;
-      content: '*'; }
-  .c-stay__row {
-    clear: both;
-    position: relative;
-    display: block;
-    margin-bottom: 20px; }
-    .c-stay__row:after {
-      clear: both;
-      display: block;
-      content: ''; }
-    .c-stay__row--rules {
-      display: table;
-      width: 100%; }
-      .c-stay__row--rules > div {
-        display: table-cell;
-        vertical-align: top; }
-  .c-stay__info {
-    display: block;
-    font-family: "Arial", sans-serif;
-    font-size: 11px;
-    line-height: 1.4;
-    font-weight: 400; }
-  .c-stay__text {
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.12);
-    padding: 0 20px;
-    font-family: "Arial", sans-serif;
-    font-size: 1.33333em;
-    font-weight: 400; }
-    .c-stay__text:hover {
-      background-color: rgba(255, 255, 255, 0.2); }
-  .c-stay ::-webkit-input-placeholder {
-    color: #e3d2ff; }
-  .c-stay :-moz-placeholder {
-    color: #e3d2ff; }
-  .c-stay :-ms-input-placeholder {
-    color: #e3d2ff; }
-  @media screen and (min-width: 961px) {
-    .c-stay {
-      position: absolute;
-      right: -30px;
-      bottom: -30px;
-      width: 44.27083%; }
-      .c-stay h3 {
-        display: inline-block; }
-        .c-stay h3:after {
-          right: 0; } }
-  @media screen and (max-width: 960px) {
-    .c-stay h3 {
-      text-align: center; }
-      .c-stay h3:after {
-        position: absolute;
-        left: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        bottom: -20px;
-        width: 200px; } }
-  @media screen and (max-width: 640px) {
-    .c-stay__text {
-      height: 50px;
-      font-size: 1.11111em; }
-    .c-stay fieldset {
-      padding: 0 30px; }
-    .c-stay h3 {
-      font-size: 8vw; } }
-  @media screen and (max-width: 480px) {
-    .c-stay .o-media {
-      float: none;
-      margin: 0 auto 30px auto; }
-    .c-stay .o-btn {
-      float: none;
-      width: 100%; } }
 
 .c-topbar {
   background-color: #8463bb;
