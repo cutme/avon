@@ -93,6 +93,9 @@ span.ui-checkbox {
     background-image: url(../img/tick.png);
     content: ' '; }
 
+.has-error span.ui-checkbox {
+  border-color: #f49bff; }
+
 span.ui-helper-hidden {
   display: none; }
 
@@ -151,6 +154,38 @@ span.ui-checkbox-state-checked-hover:after {
   .mfp-container {
     padding-left: 21px !important;
     padding-right: 21px !important; } }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0); } }
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake; }
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -394,11 +429,23 @@ strong {
     height: 60px;
     background-color: rgba(255, 255, 255, 0.12);
     padding: 0 20px;
+    border: 1px solid transparent;
     font-family: "Arial", sans-serif;
     font-size: 1.33333em;
     font-weight: 400; }
     .c-become-consultant__text:hover {
       background-color: rgba(255, 255, 255, 0.2); }
+  .c-become-consultant .message-error {
+    display: none;
+    padding-top: 5px;
+    font-family: "Arial", sans-serif;
+    font-size: 0.66667em;
+    font-weight: 400;
+    color: #f49bff; }
+  .c-become-consultant .has-error input {
+    border-color: #f49bff; }
+  .c-become-consultant .has-error .message-error {
+    display: block; }
   .c-become-consultant ::-webkit-input-placeholder {
     color: #e3d2ff; }
   .c-become-consultant :-moz-placeholder {

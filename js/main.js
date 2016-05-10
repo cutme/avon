@@ -51,8 +51,81 @@ jQuery(function($) {
 				}
 			});
 		},
+		validate: function() {
+			var el = $('form'),
+				error = 0,
+				errorClass = 'has-error animated shake',
+				check,
+				reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+			function checkField(o) {				
+				if ($(o).val() == '') {
+					$(o).parent().addClass(errorClass);
+					return false;
+				}
+				return true;
+			}
+			var validateStart = function(o) {
+				error = 0;
+				el.find('.has-error').removeClass(errorClass);
+				$('[type=text], [type=tel], [type=password], [type=date], textarea', o).each(function() {
+					if ( $(this).prop('required') === true ) {
+						check = checkField(this);
+						if (check === false) {
+							error = 1;
+						}
+					}
+				});
+				$('[type=email], [type=text], [type=password]', o).on('keydown', function() {
+					$(this).parent().removeClass(errorClass);
+				});
+				$('[type=email]', o).each(function() {
+					if ($(this).prop('required')) {
+						var email = $(this).val();
+						if (email === '') {
+							$(this).parent().addClass(errorClass);
+							error = 1;
+						} else if (reg.test(email) === false) {
+							$(this).parent().addClass(errorClass);
+							error = 1;
+						} else {
+							$(this).parent().removeClass(errorClass);
+						}
+					}
+				});
+				$('[type=checkbox]', o).each(function() {
+					if ($(this).prop('required')) {
+						if (!$(this).prop('checked')) {
+							$(this).parent().addClass(errorClass);
+							error = 1;
+						} else {
+							$(this).parent().removeClass(errorClass);
+						}
+					}
+				});
+				return error;
+			};
+			el.each(function() {
+				var submit = $('.submit', this),
+					is_error, _t = $(this);
+				submit.on('click', function(e) {
+					e.preventDefault();
+					is_error = validateStart(_t);
+					if (is_error === 1) {
+						$('html, body').animate({
+							scrollTop: $('.c-become-consultant').offset().top
+						}, 500);
+						
+					} else {
+						_t.submit();
+						return true;
+					}
+				});
+			});
+		},
 		init: function() {
 			L.modal();
+			L.validate();
 		}
 	};
 	$(document).ready(function() {

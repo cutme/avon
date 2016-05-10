@@ -26,6 +26,10 @@ span.ui-checkbox {
 	}
 }
 
+.has-error span.ui-checkbox {
+	border-color: $violet--brightest;
+}
+
 span.ui-helper-hidden {
 	display: none;
 }

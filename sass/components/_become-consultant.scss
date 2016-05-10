@@ -41,8 +41,10 @@
 	
 	h6 {
 		padding-top: 5px;
-		font-family: $arial;
-		font-weight: $regular;
+		font: {
+			family: $arial;
+			weight: $regular;
+		}
 		color: $violet--brightest;
 	}
 	
@@ -90,14 +92,36 @@
 		height: 60px;
 		background-color: rgba(white, .12);
 		padding: 0 20px;
+		border: 1px solid transparent;
 		font: {
 			family: $arial;
 			size: em(24);
 			weight: $regular;
 		}
-		
+
 		&:hover {
 			background-color: rgba(white, .2);
+		}
+	}
+
+	.message-error {
+		display: none;
+		padding-top: 5px;
+		font: {
+			family: $arial;
+			size: em(12);
+			weight: $regular;
+		}
+		color: $violet--brightest;
+	}
+
+	.has-error {
+		input {
+			border-color: $violet--brightest;
+		}
+		
+		.message-error {
+			display: block;
 		}
 	}
 
