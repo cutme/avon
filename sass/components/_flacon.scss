@@ -17,14 +17,13 @@
 		font: {
 			family: $helvetica;
 			weight: $bold;
-			size: em(58);
+			size: em(54);
 		}
 		color: #a0a7af;
 		
 		&:first-of-type {
 			padding: {
 				top: 20px;
-				right: 60px;
 			}
 		}
 	}
