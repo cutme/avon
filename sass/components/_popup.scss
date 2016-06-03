@@ -1,35 +1,55 @@
 .c-popup {
 	@include background-size(cover);
 	position: relative;
-	max-width: 690px;
+	max-width: 660px;
 	background-image: url(../img/blur-2.jpg);
-	padding: 80px grid(40, 690);
+	padding: 60px 10px;
     margin: 40px auto;
 
 	&--myths {
 		text-align: center;
 		color: white;
-
 		
 		h2 {
+			margin-bottom: 25px;
 			font: {
 				family: $coalhandluke;
-				size: em(75);
+				size: em(84);
 			}
 		}
-		
+
 		h3 {
-			margin-bottom: 40px;
-			font-size: em(36);
+			@include transform(rotate(-2deg));
+			position: relative; z-index: 10;
+			display: inline-block;
+			background-color: white;
+		    padding: 20px 30px;
+		    line-height: 1;
+			font-size: em(55);
+			color: #805fb6
+		}
+		
+		.o-btn {
+			position: relative; z-index: 5;
+			padding: 0 80px;
+			font-size: em(42);
+			
+			&:hover {
+				background-color: $violet--brightest;
+			}
 		}
 		
 		@media screen and ( max-width: 640px ) {
 			h2 {
-				font-size: 10vw;
+				font-size: 12.5vw;
 			}
 			
 			h3 {
-				font-size: 4.5vw;
+				font-size: 8.5vw;
+			}
+			
+			.o-btn {
+				padding: 0 grid(80, 640);
 			}
 		}
 		
@@ -38,6 +58,19 @@
 				top: 40px;
 				bottom: 40px;
 			}
+			
+			h2 {
+				font-size: 11.5vw;
+			}
+			
+			h3 {
+				font-size: 7.5vw;
+			}
+			
+			.o-btn {
+				font-size: 6.5vw;
+			}
+
 		}
 		
 	}

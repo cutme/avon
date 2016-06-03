@@ -697,28 +697,55 @@ body, html {
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-  max-width: 690px;
+  max-width: 660px;
   background-image: url(../img/blur-2.jpg);
-  padding: 80px 5.7971%;
+  padding: 60px 10px;
   margin: 40px auto; }
   .c-popup--myths {
     text-align: center;
     color: white; }
     .c-popup--myths h2 {
+      margin-bottom: 25px;
       font-family: "coalhandluke";
-      font-size: 4.16667em; }
+      font-size: 4.66667em; }
     .c-popup--myths h3 {
-      margin-bottom: 40px;
-      font-size: 2em; }
+      -webkit-transform: rotate(-2deg);
+      -moz-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+      -o-transform: rotate(-2deg);
+      transform: rotate(-2deg);
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      background-color: white;
+      padding: 20px 30px;
+      line-height: 1;
+      font-size: 3.05556em;
+      color: #805fb6; }
+    .c-popup--myths .o-btn {
+      position: relative;
+      z-index: 5;
+      padding: 0 80px;
+      font-size: 2.33333em; }
+      .c-popup--myths .o-btn:hover {
+        background-color: #f49bff; }
     @media screen and (max-width: 640px) {
       .c-popup--myths h2 {
-        font-size: 10vw; }
+        font-size: 12.5vw; }
       .c-popup--myths h3 {
-        font-size: 4.5vw; } }
+        font-size: 8.5vw; }
+      .c-popup--myths .o-btn {
+        padding: 0 12.5%; } }
     @media screen and (max-width: 480px) {
       .c-popup--myths {
         padding-top: 40px;
-        padding-bottom: 40px; } }
+        padding-bottom: 40px; }
+        .c-popup--myths h2 {
+          font-size: 11.5vw; }
+        .c-popup--myths h3 {
+          font-size: 7.5vw; }
+        .c-popup--myths .o-btn {
+          font-size: 6.5vw; } }
 
 /*
 	Blur
